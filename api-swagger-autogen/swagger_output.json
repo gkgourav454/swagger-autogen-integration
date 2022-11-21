@@ -1,0 +1,91 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My Backend Backend",
+        "description": "APIs used in My Backend",
+        "version": "1.0.1",
+        "contact": {
+            "name": "API support",
+            "email": "mocksolution.support@nasalcore.com",
+            "url": "https://www.nasalcore.com/contact-us"
+        }
+    },
+    "tags": [
+        {
+            "name": "products",
+            "description": ""
+        }
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "tags": [
+                    ""
+                ]
+            }
+        },
+        "/project/health": {
+            "post": {
+                "description": "",
+                "parameters": [],
+                "responses": {},
+                "tags": [
+                    "project"
+                ]
+            }
+        },
+        "/project/health2": {
+            "post": {
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "example": "any"
+                                    },
+                                    "dest": {
+                                        "example": "any"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "project"
+                ]
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "ApiKeyAuth": {
+                "type": "apiKey",
+                "name": "authorization",
+                "in": "header",
+                "description": "Authentication token"
+            }
+        }
+    },
+    "security": [
+        {
+            "ApiKeyAuth": []
+        }
+    ]
+}
